@@ -1,0 +1,17 @@
+# Data source
+bookmarks.json
+
+# Netbean
+nbproject/
+
+# PHPUnit Test
+test/
+
+# Packages
+vendor/
+
+# Others
+.DS_Store
+*~
+*.swp
+*.swo
