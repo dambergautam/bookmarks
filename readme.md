@@ -1,13 +1,14 @@
 # Firefox Bookmark webpage
-This project fetches the bookmark information from firefox profile database, dump
+This project fetches the bookmark information from Firefox profile database, dump
 in JSON file, and populate them in webpage nicely.
 
-I have used shell script to generate bookmark json file and php to display the
-json file in webpage.
-
+I have used a shell script to generate bookmark json file and PHP to display the
+bookmarks in a webpage.
 
 ## But why?
-Well, I used have bookmark adons which was supercool and helped to organize my bookmark listing. But, after my browser got upgraded to quantum version, it stop working. So, I just wanted to organize my bookmark and show them nicely when browser loaded just like my old bookmark adons.
+Well, I used have bookmark add-on which was awesome and helped to organize my
+bookmark listing. But, after my browser got upgraded to quantum version, it
+stopped working. So, I just thought to create something like my old Firefox extension.
 
 ## Project setup
 
