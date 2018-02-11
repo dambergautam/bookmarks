@@ -14,7 +14,7 @@ require_once 'inc.controller.php';
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-  <body> 
+  <body>
   <div class="container">
     <div class="header">
       <h1>Firefox Bookmarks</h1>
@@ -35,7 +35,7 @@ require_once 'inc.controller.php';
             </table>
       </div>
 
-      <!--Bookmark Tools -->
+      <!--Other bookmark -->
       <div class="col-md-6">
         <h2>Other Bookmarks</h2>
           <table class='table'>
@@ -48,42 +48,41 @@ require_once 'inc.controller.php';
             ?>
             </table>
       </div>
-    </div>    
+    </div>
 
+    <div class="row">
+      <!-- WebDevStudy Bookmark -->
+      <div class="col-md-6">
+          <h2>WebDevStudy</h2>
+            <table class='table'>
+            <?php
+            foreach ($webdevstudy_bookmark as $bmKey => $bmVal) {
+              echo "<tr>
+                      <td>".$bmVal['data']."</td>
+                    </tr>";
+            }
+            ?>
+            </table>
+      </div>
 
-    <!-- Custom boomarks items -->
-    <?php
-    $columns = 2;
-    $size = 12/$columns;
-    $counter = 0;
-    $total = count($custom_bookmarks);
-
-    foreach($custom_bookmarks as $customVal) {
-            
-      if($counter%$columns == 0) { echo "<div class='row'>"; }
-      
-      echo '<div class="col-md-'.$size.'">';
-
-        echo $customVal['title'];
-        echo "<table class='table'>";      
-        foreach ($customVal['items'] as $item) {
-          echo "<tr>
-                  <td>".$item['data']."</td>
-                </tr>";
-        }
-        echo "</table>";
-
-      echo '</div>';
-      
-      if(($counter%$columns == $columns - 1) || ($counter == $total-1)) { echo "</div>"; }
-      $counter++;
-    }
-    ?>  
-
+      <!--Damber Bookmark -->
+      <div class="col-md-6">
+        <h2>Damber</h2>
+          <table class='table'>
+            <?php
+            foreach ($damber_bookmark as $bmKey => $bmVal) {
+              echo "<tr>
+                      <td>".$bmVal['data']."</td>
+                    </tr>";
+            }
+            ?>
+            </table>
+      </div>
+    </div>
 
     <div class="footer">
       <hr>
-      &copy; 2017 WebGautam 
+      &copy; 2017 WebGautam
       <hr>
     </div>
 
