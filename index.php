@@ -9,10 +9,10 @@ require_once 'inc.controller.php';
   <title>Bookmark Items</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/app.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/app.css">
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
 </head>
   <body>
   <div class="container">
@@ -80,6 +80,10 @@ require_once 'inc.controller.php';
       </div>
     </div>
 
+    <div>
+        To update the bookmark list manually, run below command <br />
+        <i style="color:red;">bash /Users/damber/Sites/damber/firefox_bookmarks/build/generate_bookmark.sh<i>
+    </div>
     <div class="footer">
       <hr>
       &copy; 2017 WebGautam
@@ -87,7 +91,5 @@ require_once 'inc.controller.php';
     </div>
 
   </div> <!-- End .container-->
-
-
 </body>
 </html>

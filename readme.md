@@ -29,3 +29,12 @@ FIREFOX_PROFILE_PATH="/Users/damber/Library/Application\ Support/Firefox/Profile
 # Run Test
 bash <root-directory>/build/generate_bookmark.sh
 ```
+
+**Run Cron job to update bookmark json file**
+
+```
+crontab -e
+
+# Add below line and save it
+0   10  *   *   * bash /Users/damber/Sites/damber/firefox_bookmarks/build/generate_bookmark.sh
+```
