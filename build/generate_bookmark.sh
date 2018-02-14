@@ -1,4 +1,6 @@
 #!/bin/bash
+SHELL=/bin/zsh
+PATH=~/.composer/vendor/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 
 # Paths
 PROJECT_PATH="/Users/damber/Sites/damber/firefox_bookmarks/build"
@@ -13,6 +15,6 @@ cd /Users/damber/Library/Application\ Support/Firefox/Profiles/*.default
 cd $PROJECT_PATH
 
 # Generate json file
-csvtojson bookmarks.csv > bookmarks.json
+/usr/local/bin/csvtojson bookmarks.csv > bookmarks.json
 
 rm -f places.sqlite

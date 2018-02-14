@@ -5,7 +5,7 @@ class Bookmarks
 
 	public function __construct($file)
 	{
-		if (is_readable($file)) {
+		if (is_readable($file) && filesize($file) > 0) {
 			$json_data = file_get_contents($file);
 			$this->data = json_decode($json_data, true);
 		} else {
@@ -79,12 +79,19 @@ class Bookmarks
 
 			++$i;
 
+			// Ignore recent tags
 			if ($bmItem['title'] == "Recent Tags") { unset($bmArray[$i]); continue; }
 
+			// Ignore blank title items
 			if ($bmItem['title'] == "") { unset($bmArray[$i]); continue; }
 
+			// Ignore folder items
+			if ($bmItem['type'] == "2") { unset($bmArray[$i]); continue; }
+
+			// Only list item with url attribute
 			if (isset($bmItem['url'])) {
-				$img = isset($bmItem['iconuri']) ? '<img src="'.$bmItem['iconuri'].'" height="20">' :
+
+				$img = (isset($bmItem['preview_image_url']) && !empty($bmItem['preview_image_url'])) ? '<img src="'.$bmItem['preview_image_url'].'" height="20">' :
 					'<img src="images/noimage.png" height="20">';
 
 				$tags = isset($bmItem['tags']) ? $bmItem['tags'] : '';
