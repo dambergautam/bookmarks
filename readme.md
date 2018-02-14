@@ -6,9 +6,9 @@ I have used a shell script to generate bookmark json file and PHP to display the
 bookmarks in a webpage.
 
 ## But why?
-Well, I used have bookmark add-on which was awesome and helped to organize my
+Well, I used to have bookmark add-on which was awesome and helped me to organize my
 bookmark listing. But, after my browser got upgraded to quantum version, it
-stopped working. So, I just thought to create something like my old Firefox extension.
+stopped working. So, I just thought to create something like my old Firefox extension (which still need lots of work :( ).
 
 ## Project setup
 
